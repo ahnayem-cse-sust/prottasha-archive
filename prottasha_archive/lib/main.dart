@@ -30,6 +30,7 @@ class _MyHomePageState extends State<MyHomePage> {
 //      appBar: AppBar(
 //        title: Text(widget.title),
 //      ),
+    resizeToAvoidBottomPadding: false,
       body: Column(
         children: <Widget>[
           Container(
@@ -73,7 +74,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ),
           Container(
-            padding: EdgeInsets.only(top: 35.0, left: 20.0, right: 20.0),
+            padding: EdgeInsets.only(top: 95.0, left: 20.0, right: 20.0),
             child: Column(
               children: <Widget>[
                 TextField(
@@ -83,8 +84,25 @@ class _MyHomePageState extends State<MyHomePage> {
                       fontFamily: 'Montserrat',
                       fontWeight: FontWeight.bold,
                       color: Colors.grey
+                    ),
+                    focusedBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(color: Colors.green)
                     )
                   ),
+                ),
+                TextField(
+                  decoration: InputDecoration(
+                      labelText: "Password",
+                      labelStyle: TextStyle(
+                          fontFamily: 'Montserrat',
+                          fontWeight: FontWeight.bold,
+                          color: Colors.grey
+                      ),
+                      focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Colors.green)
+                      )
+                  ),
+                  obscureText: true,
                 )
               ],
             ),
