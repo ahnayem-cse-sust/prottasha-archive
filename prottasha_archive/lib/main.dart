@@ -22,17 +22,43 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(// This trailing comma makes auto-formatting nicer for build methods.
+    return Scaffold(
+//      appBar: AppBar(
+//        title: Text(widget.title),
+//      ),
+      body: Column(
+        children: <Widget>[
+          Container(
+            child: Stack(
+              children: <Widget>[
+                Container(
+                  padding: EdgeInsets.fromLTRB(15.5, 110.0, 0.0, 0.0),
+                  child: Container(
+                    child: Text(
+                      'Prottasha',
+                      style: TextStyle(
+                          fontSize: 70.0, fontWeight: FontWeight.bold, color: Colors.indigo
+                      ),
+                    ),
+                  )
+                ),
+                Container(
+                  padding: EdgeInsets.fromLTRB(15.5, 175.0, 0.0, 0.0),
+                  child: Text(
+                    'Archive',
+                    style: TextStyle(
+                        fontSize: 25.0, color: Colors.brown
+                    ),
+                  ),
+                )
+              ],
+            ),
+          )
+        ],
+      )
     );
   }
 }
