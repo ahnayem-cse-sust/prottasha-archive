@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
 
 void main() => runApp(MyApp());
 
@@ -35,22 +36,36 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Stack(
               children: <Widget>[
                 Container(
-                  padding: EdgeInsets.fromLTRB(15.5, 110.0, 0.0, 0.0),
-                  child: Container(
-                    child: Text(
-                      'Prottasha',
-                      style: TextStyle(
-                          fontSize: 70.0, fontWeight: FontWeight.bold, color: Colors.indigo
+                  child: Stack(
+                    children: <Widget>[
+                      Container(
+                        padding: EdgeInsets.fromLTRB(25.5, 120.0, 0.0, 0.0),
+                        child: Text(
+                          'P',
+                          style: TextStyle(
+                              fontSize: 90.0, fontWeight: FontWeight.bold, color: Colors.indigo,
+                              fontStyle: FontStyle.italic,
+                          ),
+                        ),
                       ),
-                    ),
-                  )
+                      Container(
+                        padding: EdgeInsets.fromLTRB(72, 158.0, 0.0, 0.0),
+                        child: Text(
+                          'rottasha',
+                          style: TextStyle(
+                              fontSize: 45.0, fontWeight: FontWeight.bold, color: Colors.indigo
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
                 ),
                 Container(
-                  padding: EdgeInsets.fromLTRB(15.5, 175.0, 0.0, 0.0),
+                  padding: EdgeInsets.fromLTRB(72, 198.0, 0.0, 0.0),
                   child: Text(
                     'Archive',
                     style: TextStyle(
-                        fontSize: 25.0, color: Colors.brown
+                        fontSize: 20.0, color: Colors.brown
                     ),
                   ),
                 )
