@@ -1,18 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
-import 'signup.dart';
 
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
+class SignupPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      routes: <String, WidgetBuilder> {
-        '/signup': (BuildContext context) => new SignupPage()
-      },
       home: MyHomePage(title: 'Prottasha Archive'),
     );
   }
@@ -84,6 +78,19 @@ class _MyHomePageState extends State<MyHomePage> {
                 children: <Widget>[
                   TextField(
                     decoration: InputDecoration(
+                        labelText: 'Name',
+                        labelStyle: TextStyle(
+                            fontFamily: 'Montserrat',
+                            fontWeight: FontWeight.bold,
+                            color: Colors.grey),
+                        focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(color: Colors.green))),
+                  ),
+                  SizedBox(
+                    height: 10.0,
+                  ),
+                  TextField(
+                    decoration: InputDecoration(
                         labelText: 'Email/Username',
                         labelStyle: TextStyle(
                             fontFamily: 'Montserrat',
@@ -107,23 +114,6 @@ class _MyHomePageState extends State<MyHomePage> {
                     obscureText: true,
                   ),
                   SizedBox(
-                    height: 5.0,
-                  ),
-                  Container(
-                    alignment: Alignment(1.0, 0.0),
-                    padding: EdgeInsets.only(top: 15.0, left: 20.0),
-                    child: InkWell(
-                      child: Text(
-                        "Forget Password?",
-                        style: TextStyle(
-                            color: Colors.green,
-                            fontWeight: FontWeight.bold,
-                            fontFamily: 'Montserrat',
-                            decoration: TextDecoration.underline),
-                      ),
-                    ),
-                  ),
-                  SizedBox(
                     height: 40.0,
                   ),
                   Container(
@@ -137,7 +127,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         onTap: () {},
                         child: Center(
                           child: Text(
-                            "LOGIN",
+                            "Register",
                             style: TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
@@ -164,7 +154,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           children: <Widget>[
                             Center(
                               child:
-                                  ImageIcon(AssetImage('images/facebook.png')),
+                              ImageIcon(AssetImage('images/facebook.png')),
                             ),
                             SizedBox(width:10.0),
                             Center(
@@ -176,32 +166,6 @@ class _MyHomePageState extends State<MyHomePage> {
                           ],
                         ),
                       )),
-                  SizedBox(height: 15.0,),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Text(
-                        'New to Prottasha?',
-                        style: TextStyle(
-                          fontFamily: 'Montserrat'
-                        ),
-                      ),
-                      SizedBox(width: 5.0,),
-                      InkWell(
-                        onTap: (){
-                          Navigator.of(context).pushNamed('/signup');
-                        },
-                        child: Text('Register',
-                        style: TextStyle(
-                          color: Colors.green,
-                          fontFamily: 'Montserrat',
-                          fontWeight: FontWeight.bold,
-                          decoration: TextDecoration.underline
-                        ),
-                        ),
-                      )
-                    ],
-                  )
                 ],
               ),
             )
