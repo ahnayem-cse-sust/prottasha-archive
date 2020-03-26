@@ -171,7 +171,31 @@ class _MyHomePageState extends State<MyHomePage> {
                             )
                           ],
                         ),
-                      ))
+                      )),
+                  SizedBox(height: 15.0,),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Text(
+                        'New to Prottasha?',
+                        style: TextStyle(
+                          fontFamily: 'Montserrat'
+                        ),
+                      ),
+                      SizedBox(width: 5.0,),
+                      InkWell(
+                        onTap: (){},
+                        child: Text('Register',
+                        style: TextStyle(
+                          color: Colors.green,
+                          fontFamily: 'Montserrat',
+                          fontWeight: FontWeight.bold,
+                          decoration: TextDecoration.underline
+                        ),
+                        ),
+                      )
+                    ],
+                  )
                 ],
               ),
             )
